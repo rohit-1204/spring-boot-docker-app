@@ -17,13 +17,21 @@ public class WelcomeRestController {
 
 	@GetMapping
 	public String welcomeMsg() {
-		logger.info("***** welcomeMsg() execution start *****");
-		String msg = "Welcome to Ashok IT - Software Training Institute (HYD) ..!!";
-		logger.info("***** welcomeMsg() execution end *****");
-		String s = "hello";
-		logger.info("******************************************************************");
-		return msg;
-	}
+    logger.info("***** welcomeMsg() execution start *****");
+
+    String msg = "Docker Demo App is running successfully 🚀";
+
+    logger.info("App is running inside Docker container");
+    logger.info("Container port: 8080 (mapped to host port)");
+    logger.info("Image is built using multi-stage Docker build");
+    logger.info("Base image: eclipse-temurin (Java 17)");
+    logger.info("Docker helps to package app with all dependencies");
+
+    logger.info("***** welcomeMsg() execution end *****");
+    logger.info("******************************************************************");
+
+    return msg;
+}
 	
 	@GetMapping("/greet")
 	public String greetMsg() {
